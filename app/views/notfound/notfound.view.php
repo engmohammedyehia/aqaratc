@@ -1,7 +1,7 @@
 <?php include VIEWS_PATH . DS . 'home_section.phtml'; ?>
 <section class="consult_slide">
     <div class="consult_slide_content_wrapper clearfix">
-        <h1>Page is under construction</h1>
+        <h1>Page is under construction. Please Wait.</h1>
         <p></p>
         <div class="browser">
             <div class="browser_bar">
