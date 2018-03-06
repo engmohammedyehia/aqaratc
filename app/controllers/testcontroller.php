@@ -5,7 +5,6 @@ class TestController extends AbstractController
 {
     public function defaultAction()
     {
-    	// test
-        var_dump($this);
+    	echo 'asdasd';
     }
 }
