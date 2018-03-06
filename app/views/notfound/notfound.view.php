@@ -11,7 +11,7 @@
                 <div class="url">https://www.aqaratc.com<?= $_SERVER['REQUEST_URI'] ?></div>
             </div>
             <div class="consult_form clearfix">
-                <p class="notfound"><i class="fa fa-cog fa-spin"></i> This page is under construction.<i class="fa fa-cog fa-spin"></i></p>
+                <p class="notfound"><i class="fa fa-cog fa-spin"></i> Content is being prepared. Please visit us later.<i class="fa fa-cog fa-spin"></i></p>
             </div>
         </div>
     </div>
