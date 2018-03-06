@@ -9,8 +9,7 @@ class SessionManager extends \SessionHandler
     private $sessionSSL = true;
     private $sessionHTTPOnly = true;
     private $sessionPath = '/';
-    private $sessionDomain = '.madinahcheque.dev';
-    private $sessionSavePath = SESSION_SAVE_PATH;
+    private $sessionDomain = '.aqaratc.com';
 
     private $sessionCipherAlgo = 'AES-128-ECB';
     private $sessionCipherKey = 'WYCRYPT0K3Y@2016';
