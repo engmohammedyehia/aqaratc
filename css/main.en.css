@@ -683,6 +683,11 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper p {
     color: #FFF;
 }
 
+div.wrapper section.consult_slide div.consult_slide_content_wrapper p > a:link,
+div.wrapper section.consult_slide div.consult_slide_content_wrapper p > a:visited {
+    color: inherit;
+}
+
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser {
     background: #f1f1f1;
     width: 950px;
@@ -780,6 +785,8 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
 div.action form input[type=text],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=email],
 div.action form input[type=email],
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=password],
+div.action form input[type=password],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea,
 div.action form textarea {
     background: #f7f7f7;
@@ -802,6 +809,8 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
 div.action form input[type=text],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=email],
 div.action form input[type=email],
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=password],
+div.action form input[type=password],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea,
 div.action form textarea {
     cursor: auto;
@@ -992,21 +1001,45 @@ div.action {
     padding: 10px 0 0 0;
 }
 
+div.action.small {
+    width: 400px;
+}
+
 div.action form div.label {
-    width: 250px;
+    width: 255px;
+}
+
+div.action form > div.label {
+    width: 100%;
 }
 
 div.action form div.label select,
 div.action form div.label input[type=text],
 div.action form div.label input[type=email],
+div.action form div.label input[type=password],
 div.action form div.label textarea {
     width: 100%;
     border-radius: 0;
 }
 
 div.action form div.label input[type=submit] {
-    width: 250px !important;
+    width: 255px !important;
     border-radius: 0 !important;
+    cursor: pointer;
+}
+
+div.action form div.label a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+div.action form > input[type=submit] {
+    min-width: 80px;
+    display: inline-block;
+    padding: 11px 15px;
+    background: #0072c1;
+    color: #fff;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -1035,11 +1068,39 @@ div.steps div.step.selected {
     background: #ecc285;
 }
 
+p.message {
+    font-size: 0.95em;
+    background-color: #222;
+    color: #FFF;
+    padding: 5px 20px;
+    line-height: 1.5;
+    margin: -10px 0 10px 0 !important;
+    position: relative;
+    box-sizing: border-box;
+}
 
+p.message a:link, p.message a:visited {
+    position: absolute;
+    right: 7px;
+    color: inherit;
+    top: 7px;
+}
 
+p.message.t1 {
+    background-color: #68ab68;
+}
 
+p.message.t2 {
+    background-color: #900;
+}
 
+p.message.t3 {
+    background-color: #e2b072;
+}
 
+p.message.t4 {
+    background-color: #537190;
+}
 
 /* ==========================================================================
    Helper classes
@@ -1472,7 +1533,7 @@ div.steps div.step.selected {
     }
 
     div.action {
-        width: 85%;
+        width: 85% !important;
     }
 
     div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.browser_bar div.url {

@@ -15,11 +15,17 @@
         </ul>
         <div class="logo"><a href=""><img src="/img/logo.png"></a></div>
         <h1>Egypt</h1>
-        <div class="authentication">
-            <a class="login" href="/auth/login">Login</a>
-            <span>Or</span>
-            <a class="register" href="/auth/register">Sign Up</a>
-        </div>
+        <?php if ((int) $this->session->logged === 1) { ?>
+            <div class="authentication">
+                
+            </div>
+        <?php } else { ?>
+            <div class="authentication">
+                <a class="login" href="/auth/login">Login</a>
+                <span>Or</span>
+                <a class="register" href="/auth/register">Sign Up</a>
+            </div>
+        <?php } ?>
         <div class="head_tool_bar">
             <ul>
                 <li><a href="/buy">Buy</a></li>

@@ -1,6 +1,8 @@
 <?php
 namespace PHPMVC\Models;
 
+use PHPMVC\LIB\SessionManager;
+
 class UserModel extends AbstractModel
 {
     public $UserId;
@@ -12,7 +14,6 @@ class UserModel extends AbstractModel
     public $LastLogin;
     public $GroupId;
     public $Status;
-    public $BranchId;
 
     /**
      * @var UserProfileModel
@@ -31,7 +32,6 @@ class UserModel extends AbstractModel
         'SubscriptionDate'  => self::DATA_TYPE_DATE,
         'LastLogin'         => self::DATA_TYPE_STR,
         'GroupId'           => self::DATA_TYPE_INT,
-        'BranchId'          => self::DATA_TYPE_INT,
         'Status'            => self::DATA_TYPE_INT,
     );
 
@@ -42,7 +42,6 @@ class UserModel extends AbstractModel
         $this->Password = crypt($password, APP_SALT);
     }
 
-    // TODO:: FIX THE TABLE ALIASING
     public static function getUsers(UserModel $user)
     {
         return self::get(
@@ -57,7 +56,7 @@ class UserModel extends AbstractModel
         ');
     }
 
-    public static function authenticate ($username, $password, $session)
+    public static function authenticate ($username, $password, SessionManager $session)
     {
         $password = crypt($password, APP_SALT) ;
         $sql = 'SELECT *, (SELECT GroupName FROM app_users_groups WHERE app_users_groups.GroupId = ' . self::$tableName . '.GroupId) GroupName FROM ' . self::$tableName . ' WHERE Username = "' . $username . '" AND Password = "' .  $password . '"';
@@ -68,6 +67,7 @@ class UserModel extends AbstractModel
             }
             $foundUser->LastLogin = date('Y-m-d H:i:s');
             $foundUser->save();
+            $session->logged = 1;
             return $foundUser;
         }
         return false;
