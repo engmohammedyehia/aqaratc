@@ -568,20 +568,12 @@ div.how_content_container div.how_block {
 }
 
 div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
-div.how_content_container div.how_block:nth-child(2) {
+div.how_content_container div.how_block:nth-child(2),
+div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block:nth-child(3),
+div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block:last-child {
     margin-left: 45px;
-}
-
-div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
-div.how_content_container div.how_block:nth-child(4) {
-    margin-right: 45px;
-}
-
-div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
-div.how_content_container div.how_block:last-child,
-div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper
-div.how_content_container div.how_block:nth-child(3) {
-    float: right;
 }
 
 div.wrapper section.how_aqaratc_slide

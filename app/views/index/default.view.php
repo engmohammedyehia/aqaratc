@@ -84,14 +84,14 @@
                 <p>We match you with the right professional agent that is on your side 100% and he do all the hard work on your behalf to get the job done.</p>
             </div>
             <div class="how_block">
-                <div class="icon fast"></div>
-                <h2>Rate the agent</h2>
-                <p>Rating our agents helps us maintain the quality of the service.</p>
-            </div>
-            <div class="how_block">
                 <div class="icon rate"></div>
                 <h2>Fast and hassle-free</h2>
                 <p>We use the technology to make the buying and selling process faster and easier for you.</p>
+            </div>
+            <div class="how_block">
+                <div class="icon fast"></div>
+                <h2>Rate the agent</h2>
+                <p>Rating our agents helps us maintain the quality of the service.</p>
             </div>
         </div>
     </div>

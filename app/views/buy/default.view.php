@@ -19,14 +19,14 @@
                 <p>We will match you with the best local Aqaratc Agent to buy your home faster, easier and safer.</p>
             </div>
             <div class="how_block">
-                <div class="icon rate2"></div>
-                <h2>Rate our agent</h2>
-                <p>Our agents are here to support you at any time. We then rate them based on your satisfaction.</p>
-            </div>
-            <div class="how_block">
                 <div class="icon tour"></div>
                 <h2>Take an online tour</h2>
                 <p>Save your time by previewing and comparing the available options online before you make a visit.</p>
+            </div>
+            <div class="how_block">
+                <div class="icon rate2"></div>
+                <h2>Rate our agent</h2>
+                <p>Our agents are here to support you at any time. We then rate them based on your satisfaction.</p>
             </div>
         </div>
     </div>
