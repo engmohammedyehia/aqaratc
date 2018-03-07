@@ -2,12 +2,12 @@
 namespace PHPMVC\Controllers;
 
 
-class BuyController extends AbstractController
+class SellController extends AbstractController
 {
     public function defaultAction()
     {
         $this->language->load('template.common');
-        $this->language->load('buy.default');
+        $this->language->load('sell.default');
 
         $this->_view();
     }

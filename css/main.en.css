@@ -149,15 +149,21 @@ div.wrapper section.home_slide_template {
     background: #FFF;
 }
 
-div.wrapper section.buy_slide {
+div.wrapper section.buy_slide,
+div.wrapper section.sell_slide {
     position: relative;
     background-image: url(/img/buy_background.jpg);
     width: 100%;
-    height: 320px;
+    height: 330px;
     background-repeat: no-repeat;
     background-position: center -100px;
     background-size: 100% auto;
-    padding-top: 180px;
+    padding-top: 200px;
+}
+
+div.wrapper section.sell_slide {
+    background-image: url(/img/sell_background.jpg);
+    background-position: center top;
 }
 
 div.wrapper section.home_slide div.home_slide_content_wrapper,
@@ -433,7 +439,8 @@ div.wrapper section.home_slide div.home_slide_content_wrapper div.search_contain
     font-weight: bold;
 }
 
-div.wrapper section.buy_slide h1 {
+div.wrapper section.buy_slide h1,
+div.wrapper section.sell_slide h1 {
     border: none;
     font-size: 2.5em;
     text-align: center;
@@ -444,7 +451,12 @@ div.wrapper section.buy_slide h1 {
     width: 550px;
 }
 
-div.wrapper section.buy_slide h1 + p {
+div.wrapper section.buy_slide h1 {
+    background: rgba(99, 94, 54, 0.5);
+}
+
+div.wrapper section.buy_slide h1 + p,
+div.wrapper section.sell_slide h1 + p {
     background: rgba(255, 165, 0, 0.4);
     color: #fff;
     padding: 10px;
@@ -454,7 +466,8 @@ div.wrapper section.buy_slide h1 + p {
     font-size: 1em;
 }
 
-div.wrapper section.buy_slide h1 + p > strong {
+div.wrapper section.buy_slide h1 + p > strong,
+div.wrapper section.sell_slide h1 + p > strong {
     font-weight: normal;
     border-bottom: solid 2px orange;
 }
@@ -636,6 +649,12 @@ div.how_content_container div.how_block div.icon.tour {
 
 div.wrapper section.how_aqaratc_slide
 div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block div.icon.marketing {
+    background: url(/img/how_sprite.png) no-repeat 0 -707px;
+}
+
+div.wrapper section.how_aqaratc_slide
+div.how_aqaratc_slide_content_wrapper
 div.how_content_container div.how_block div.icon + h2 {
     font-weight: bold;
     font-size: 1.4em;
@@ -672,6 +691,10 @@ a.call_to_action:visited{
 
 div.wrapper section.consult_slide {
     background: #479dce;
+}
+
+div.wrapper section.consult_slide.orange {
+    background: #f39c45;
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper {
@@ -845,6 +868,10 @@ div.action form div.label textarea + input[type=submit] {
     text-align: center;
     width: 430px;
     cursor: pointer;
+}
+
+div.action form div.label textarea + input[type=submit].orange {
+    background: #f39c45;
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input::placeholder,
