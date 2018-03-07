@@ -17,12 +17,14 @@ $('a.close, div.overlay').click(function(evt)
     $('ul.mobile_menu').removeClass('show');
 })
 
-var hammertime = new Hammer(document.querySelector('div.wrapper'));
-hammertime.on('swiperight', function(ev) {
-    $('div.overlay').addClass('show');
-    $('ul.mobile_menu').addClass('show');
-});
-hammertime.on('swipeleft', function(ev) {
-    $('div.overlay').removeClass('show');
-    $('ul.mobile_menu').removeClass('show');
-});
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    var hammertime = new Hammer(document.querySelector('div.wrapper'));
+    hammertime.on('swiperight', function(ev) {
+        $('div.overlay').addClass('show');
+        $('ul.mobile_menu').addClass('show');
+    });
+    hammertime.on('swipeleft', function(ev) {
+        $('div.overlay').removeClass('show');
+        $('ul.mobile_menu').removeClass('show');
+    });
+}
