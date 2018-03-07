@@ -1478,6 +1478,15 @@ div.steps div.step.selected {
         margin: 30px auto !important;
     }
 
+    div.action form div.left,
+    div.action form div.right {
+        float: none;
+    }
+
+    div.action form div.label {
+        width: 100%;
+    }
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
