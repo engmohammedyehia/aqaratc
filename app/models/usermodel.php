@@ -68,6 +68,7 @@ class UserModel extends AbstractModel
             $foundUser->LastLogin = date('Y-m-d H:i:s');
             $foundUser->save();
             $session->logged = 1;
+            $session->u = serialize($foundUser);
             return $foundUser;
         }
         return false;

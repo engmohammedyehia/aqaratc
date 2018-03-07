@@ -316,6 +316,18 @@ div.wrapper section.home_slide_template div.home_slide_content_wrapper div.authe
     margin-left: 5px;
 }
 
+div.wrapper section.home_slide div.home_slide_content_wrapper div.authentication a.user {
+    margin-left: -8px;
+}
+
+div.wrapper section.home_slide div.home_slide_content_wrapper div.authentication a.user > i,
+div.wrapper section.home_slide_template div.home_slide_content_wrapper div.authentication a.user > i {
+    margin-right: 10px;
+    font-size: 1.3em;
+    display: block;
+    float: left;
+}
+
 div.wrapper section.home_slide div.home_slide_content_wrapper div.authentication a.register:hover,
 div.wrapper section.home_slide div.home_slide_content_wrapper div.authentication a.register:active,
 div.wrapper section.home_slide_template div.home_slide_content_wrapper div.authentication a.register:hover,

@@ -9,15 +9,19 @@
             <li><a href="/sell"><i class="fa fa-tag"></i>Sell</a></li>
             <li><a href="/agents"><i class="fa fa-group"></i>Our Agents</a></li>
             <li><a href="/howitworks"><i class="fa fa-question-circle"></i>How it works?</a></li>
-            <li><a href="/auth/login"><i class="fa fa-sign-in"></i>Login</a></li>
-            <li><a href="/auth/register"><i class="fa fa-edit"></i>Register</a></li>
+            <?php if (isset($this->session->logged) && (int) $this->session->logged === 1) { ?>
+                <li><a href="javascript:;"><i class="fa fa-user-circle"></i>Welcome, <?= $this->session->u->Username ?></a></li>
+            <?php } else { ?>
+                <li><a href="/auth/login"><i class="fa fa-sign-in"></i>Login</a></li>
+                <li><a href="/auth/register"><i class="fa fa-edit"></i>Register</a></li>
+            <?php } ?>
             <li><a href="javascript:;"><i class="fa fa-globe"></i>عربي</a></li>
         </ul>
         <div class="logo"><a href=""><img src="/img/logo.png"></a></div>
         <h1>Egypt</h1>
         <?php if (isset($this->session->logged) && (int) $this->session->logged === 1) { ?>
             <div class="authentication">
-
+                <a class="user" href=""><i class="fa fa-user-circle"></i>Welcome, <?= $this->session->u->Username ?></a>
             </div>
         <?php } else { ?>
             <div class="authentication">

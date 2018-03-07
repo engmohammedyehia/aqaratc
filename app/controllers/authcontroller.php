@@ -13,6 +13,10 @@ class AuthController extends AbstractController
 
     public function loginAction()
     {
+        if(isset($this->session->u)) {
+            $this->redirect('/');
+        }
+
         $this->language->load('auth.login');
 
         if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit'])) {
