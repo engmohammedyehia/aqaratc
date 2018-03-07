@@ -166,6 +166,11 @@ div.wrapper section.sell_slide {
     background-position: center top;
 }
 
+div.wrapper section.buy_slide.valuation {
+    background-image: url(/img/home_valuation_background.jpg);
+    background-position: center top;
+}
+
 div.wrapper section.home_slide div.home_slide_content_wrapper,
 div.wrapper section.home_slide_template div.home_slide_content_wrapper,
 div.wrapper section.browse_slide_template div.browse_slide_content_wrapper {
@@ -455,6 +460,10 @@ div.wrapper section.buy_slide h1 {
     background: rgba(99, 94, 54, 0.5);
 }
 
+div.wrapper section.buy_slide h1.brown {
+    background: rgba(73, 38, 19, 0.5);
+}
+
 div.wrapper section.buy_slide h1 + p,
 div.wrapper section.sell_slide h1 + p {
     background: rgba(255, 165, 0, 0.4);
@@ -697,6 +706,10 @@ div.wrapper section.consult_slide.orange {
     background: #f39c45;
 }
 
+div.wrapper section.consult_slide.brown {
+    background: #5f4c42;
+}
+
 div.wrapper section.consult_slide div.consult_slide_content_wrapper {
     width: 1140px;
     margin: 0 auto;
@@ -872,6 +885,10 @@ div.action form div.label textarea + input[type=submit] {
 
 div.action form div.label textarea + input[type=submit].orange {
     background: #f39c45;
+}
+
+div.action form div.label textarea + input[type=submit].brown {
+    background: #5e4c42;
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input::placeholder,

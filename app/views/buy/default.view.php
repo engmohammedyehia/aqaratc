@@ -51,7 +51,7 @@
                         </div>
                         <div class="label">
                             <label for="budegt">Your Budget (EGP) <span class="red">*</span></label>
-                            <input required type="email" name="budegt" id="budegt" placeholder="Ex: 2,000,000">
+                            <input required type="text" name="budegt" id="budegt" placeholder="Ex: 2,000,000">
                         </div>
                         <div class="label select">
                             <label for="location">When do you need to buy?</label>

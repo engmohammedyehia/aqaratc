@@ -51,7 +51,7 @@
                         </div>
                         <div class="label">
                             <label for="price">Price (EGP) <span class="red">*</span></label>
-                            <input required type="email" name="price" id="price" placeholder="Ex: 2,000,000">
+                            <input required type="text" name="price" id="price" placeholder="Ex: 2,000,000">
                         </div>
                         <div class="label select">
                             <label for="location">When do you need to sell?</label>
