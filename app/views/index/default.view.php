@@ -44,7 +44,7 @@
             <ul>
                 <li><a class="selected" href="javascript:;">Find A Home</a></li>
                 <li><a href="javascript:;">Sell My Home</a></li>
-                <li><a href="javascript:;">Home Evaluation</a></li>
+                <li><a href="javascript:;">Home Valuation</a></li>
             </ul>
             <form class="clearfix" method="post" enctype="application/x-www-form-urlencoded">
                 <input type="text" name="q" placeholder="Enter a City or a Region">
