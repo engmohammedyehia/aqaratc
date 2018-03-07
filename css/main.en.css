@@ -1488,7 +1488,7 @@ div.steps div.step.selected {
     }
 
     div.action form div.label input[type=submit] {
-        width: 100%;
+        width: 100% !important;
     }
 
     div.steps {
