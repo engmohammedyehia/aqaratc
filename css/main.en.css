@@ -687,7 +687,7 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper h1 {
     color: #FFF;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper p {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper p:not(.message) {
     font-size: 1em;
     text-align: center;
     width: 400px;

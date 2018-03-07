@@ -110,6 +110,7 @@
     <div class="consult_slide_content_wrapper clearfix">
         <h1>Get Your Free Consultation Now</h1>
         <p>Our consultants are here to help you anytime</p>
+        <a name="success"></a>
         <div class="browser">
             <div class="browser_bar">
                 <a class="button close" href="javascript:;"></a>
@@ -118,6 +119,9 @@
                 <div class="url">https://www.aqaratc.com/consult</div>
             </div>
             <div class="consult_form clearfix">
+                <?php $messages = $this->messenger->getMessages(); if(!empty($messages)): foreach ($messages as $message): ?>
+                    <p class="message t<?= $message[1] ?>"><?= $message[0] ?><a href="" class="closeBtn"><i class="fa fa-times"></i></a></p>
+                <?php endforeach;endif; ?>
                 <form method="post" enctype="application/x-www-form-urlencoded">
                     <div class="left">
                         <div class="label select">
