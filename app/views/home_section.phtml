@@ -22,10 +22,10 @@
         </div>
         <div class="head_tool_bar">
             <ul>
-                <li><a href="/buy">Buy</a></li>
-                <li><a href="/sell">Sell</a></li>
-                <li><a href="/agents">Our Agents</a></li>
-                <li><a href="/howitworks">How it works?</a></li>
+                <li><a href="/buy" <?= preg_match('/buy/i', $_SERVER['REQUEST_URI']) ? 'class="selected"' : '' ?>>Buy</a></li>
+                <li><a href="/sell" <?= preg_match('/sell/i', $_SERVER['REQUEST_URI']) ? 'class="selected"' : '' ?>>Sell</a></li>
+                <li><a href="/agents" <?= preg_match('/agents/i', $_SERVER['REQUEST_URI']) ? 'class="selected"' : '' ?>>Our Agents</a></li>
+                <li><a href="/howitworks" <?= preg_match('/howitworks/i', $_SERVER['REQUEST_URI']) ? 'class="selected"' : '' ?>>How it works?</a></li>
                 <li><a href="javascript:;">عربي</a></li>
             </ul>
         </div>
