@@ -161,7 +161,8 @@ div.wrapper section.buy_slide {
 }
 
 div.wrapper section.home_slide div.home_slide_content_wrapper,
-div.wrapper section.home_slide_template div.home_slide_content_wrapper {
+div.wrapper section.home_slide_template div.home_slide_content_wrapper,
+div.wrapper section.browse_slide_template div.browse_slide_content_wrapper {
     width: 1140px;
     margin: 0 auto;
 }
@@ -645,12 +646,14 @@ div.how_aqaratc_slide_content_wrapper
 div.how_content_container div.how_block a:link,
 div.wrapper section.how_aqaratc_slide
 div.how_aqaratc_slide_content_wrapper
-div.how_content_container div.how_block a:visited {
+div.how_content_container div.how_block a:visited,
+a.call_to_action:link,
+a.call_to_action:visited{
     display: block;
     color: #0072c1;
     font-weight: bold;
     text-align: center;
-    width: 200px;
+    min-width: 200px;
     margin: 10px auto 0 auto;
     text-decoration: none;
 }
@@ -862,6 +865,44 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form p.notfound {
     color: #000;
     font-size: 1.2em;
+}
+
+div.wrapper section.browse_slide {
+    background: #fff;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper {
+    width: 1140px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left {
+    float: left;
+    width: 400px;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper div.right {
+    float: right;
+    width: 600px;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left h1 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left p {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div.wrapper section.browse_slide div.browse_slide_content_wrapper div.right img {
+    height: 400px;
 }
 
 div.wrapper footer {
@@ -1183,6 +1224,7 @@ div.steps div.step.selected {
     div.wrapper section.why_aqaratc_slide div.why_aqaratc_slide_content_wrapper,
     div.wrapper section.how_aqaratc_slide div.how_aqaratc_slide_content_wrapper,
     div.wrapper section.consult_slide div.consult_slide_content_wrapper,
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper,
     div.wrapper div.footer_content_wrapper {
         width: 100%;
     }
@@ -1455,6 +1497,38 @@ div.steps div.step.selected {
 
     div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label.select::after {
         right: 10px;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper {
+        height: auto;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left,
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.right {
+        float: none;
+        width: 100%;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left {
+        margin-bottom: 30px;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left h1 {
+        font-size: 2em;
+        text-align: center;
+        font-weight: normal;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.left p {
+        margin: 0 auto 20px auto;
+        width: 90%;
+    }
+
+    div.wrapper section.browse_slide div.browse_slide_content_wrapper div.right img {
+        width: 100%;
+        height: auto;
     }
 
     div.wrapper div.footer_content_wrapper div.footer_block:first-child {

@@ -81,3 +81,15 @@
         </div>
     </div>
 </section>
+<section class="browse_slide">
+    <div class="browse_slide_content_wrapper clearfix">
+        <div class="left">
+            <h1>Browse our exclusive listing</h1>
+            <p>Start by browsing our agents exclusive listing. Browse different property types from hundreds of properties available on Aqaratc.</p>
+            <a href="" class="call_to_action">Browse our exclusive properties >></a>
+        </div>
+        <div class="right">
+            <img src="/img/buy_browse_slide_image.jpg">
+        </div>
+    </div>
+</section>
