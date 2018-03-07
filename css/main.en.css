@@ -1487,6 +1487,10 @@ div.steps div.step.selected {
         width: 100%;
     }
 
+    div.steps {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
