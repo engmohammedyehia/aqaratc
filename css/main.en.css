@@ -823,6 +823,7 @@ div.action form div.label textarea + input[type=submit] {
     color: #fff;
     text-align: center;
     width: 430px;
+    cursor: pointer;
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input::placeholder,
@@ -1006,6 +1007,7 @@ div.action form div.label textarea {
 div.action form div.label input[type=submit] {
     width: 250px !important;
     border-radius: 0 !important;
+    cursor: pointer;
 }
 
 div.action form div.label.select::after {
