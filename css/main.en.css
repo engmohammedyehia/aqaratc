@@ -146,6 +146,18 @@ div.wrapper section.home_slide_template {
     position: relative;
     width: 100%;
     height: 80px;
+    background: #FFF;
+}
+
+div.wrapper section.buy_slide {
+    position: relative;
+    background-image: url(/img/buy_background.jpg);
+    width: 100%;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center -100px;
+    background-size: 100% auto;
+    padding-top: 180px;
 }
 
 div.wrapper section.home_slide div.home_slide_content_wrapper,
@@ -238,6 +250,12 @@ div.wrapper section.home_slide div.home_slide_content_wrapper div.head_tool_bar 
 div.wrapper section.home_slide_template div.home_slide_content_wrapper div.head_tool_bar ul li a:hover,
 div.wrapper section.home_slide_template div.home_slide_content_wrapper div.head_tool_bar ul li a:active {
     text-decoration: underline;
+}
+
+div.wrapper section.home_slide_template div.home_slide_content_wrapper div.head_tool_bar ul li a.selected {
+    border-bottom: solid 3px #0072c1;
+    color: #0072c1;
+    font-weight: bold;
 }
 
 div.wrapper section.home_slide div.home_slide_content_wrapper div.authentication a:link,
@@ -400,6 +418,32 @@ div.wrapper section.home_slide div.home_slide_content_wrapper div.search_contain
 div.wrapper section.home_slide div.home_slide_content_wrapper div.search_container form + p > span {
     color: inherit;
     font-weight: bold;
+}
+
+div.wrapper section.buy_slide h1 {
+    border: none;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0 auto;
+    color: #fff;
+    background: rgba(0, 114, 193, 0.35);
+    padding: 10px;
+    width: 550px;
+}
+
+div.wrapper section.buy_slide h1 + p {
+    background: rgba(255, 165, 0, 0.4);
+    color: #fff;
+    padding: 10px;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1em;
+}
+
+div.wrapper section.buy_slide h1 + p > strong {
+    font-weight: normal;
+    border-bottom: solid 2px orange;
 }
 
 div.wrapper section.why_aqaratc_slide {
@@ -565,6 +609,24 @@ div.wrapper section.how_aqaratc_slide
 div.how_aqaratc_slide_content_wrapper
 div.how_content_container div.how_block div.icon.fast {
     background: url(/img/how_sprite.png) no-repeat 0 -280px;
+}
+
+div.wrapper section.how_aqaratc_slide
+div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block div.icon.save {
+    background: url(/img/how_sprite.png) no-repeat 0 -393px;
+}
+
+div.wrapper section.how_aqaratc_slide
+div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block div.icon.rate2 {
+    background: url(/img/how_sprite.png) no-repeat 0 -595px;
+}
+
+div.wrapper section.how_aqaratc_slide
+div.how_aqaratc_slide_content_wrapper
+div.how_content_container div.how_block div.icon.tour {
+    background: url(/img/how_sprite.png) no-repeat 0 -498px;
 }
 
 div.wrapper section.how_aqaratc_slide
@@ -869,6 +931,16 @@ div.ui-loader {
     display: none !important;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -1066,6 +1138,22 @@ div.ui-loader {
         background-repeat: no-repeat;
         background-position: center top;
         background-size: auto auto;
+    }
+
+    div.wrapper section.buy_slide {
+        padding-top: 90px;
+        height: 130px;
+        background-position: center top;
+    }
+
+    div.wrapper section.buy_slide h1 {
+        font-size: 1em;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    div.wrapper section.buy_slide h1 + p {
+        display: none;
     }
 
     div.wrapper div.footer_content_wrapper {
