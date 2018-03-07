@@ -1341,19 +1341,22 @@ p.message.t4 {
         background-size: auto auto;
     }
 
-    div.wrapper section.buy_slide {
+    div.wrapper section.buy_slide,
+    div.wrapper section.sell_slide {
         padding-top: 90px;
         height: 130px;
         background-position: center top;
     }
 
-    div.wrapper section.buy_slide h1 {
+    div.wrapper section.buy_slide h1,
+    div.wrapper section.sell_slide h1 {
         font-size: 1em;
         width: 90%;
         box-sizing: border-box;
     }
 
-    div.wrapper section.buy_slide h1 + p {
+    div.wrapper section.buy_slide h1 + p,
+    div.wrapper section.sell_slide h1 + p {
         display: none;
     }
 
