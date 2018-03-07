@@ -15,9 +15,9 @@
         </ul>
         <div class="logo"><a href=""><img src="/img/logo.png"></a></div>
         <h1>Egypt</h1>
-        <?php if ((int) $this->session->logged === 1) { ?>
+        <?php if (isset($this->session->logged) && (int) $this->session->logged === 1) { ?>
             <div class="authentication">
-                
+
             </div>
         <?php } else { ?>
             <div class="authentication">
