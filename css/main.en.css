@@ -740,19 +740,23 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
     color: #666;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form,
+div.action form {
     padding: 30px;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.left {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.left,
+div.action form div.left {
     float: left;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.right {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.right,
+div.action form div.right {
     float: right;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.label {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form form div.label,
+div.action form div.label {
     width: 445px;
     margin-bottom: 20px;
     position: relative;
@@ -760,21 +764,29 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label label,
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input,
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label select {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label select,
+div.action form div.label label,
+div.action form div.label input,
+div.action form div.label select {
     display: block;
     color: #666;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label label {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label label,
+div.action form div.label label {
     font-size: 0.95em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label select,
+div.action form select,
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=text],
+div.action form input[type=text],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=email],
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea {
+div.action form input[type=email],
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea,
+div.action form textarea {
     background: #f7f7f7;
     box-sizing: border-box;
     width: 400px;
@@ -792,18 +804,23 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
 }
 
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=text],
+div.action form input[type=text],
 div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input[type=email],
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea {
+div.action form input[type=email],
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea,
+div.action form textarea {
     cursor: auto;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea,
+div.action form div.label textarea {
     width: 430px;
     height: 160px;
     margin-bottom: 10px;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea + input[type=submit] {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label textarea + input[type=submit],
+div.action form div.label textarea + input[type=submit] {
     display: block;
     padding: 11px 15px;
     border-radius: 5px;
@@ -813,15 +830,18 @@ div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser 
     width: 430px;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input::placeholder {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label input::placeholder,
+div.action form div.label input::placeholder {
     color: #999;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label select:focus {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label select:focus,
+div.action form div.label select:focus {
     outline: none;
 }
 
-div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label.select::after {
+div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.consult_form div.label.select::after,
+div.action form div.label.select::after {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
@@ -931,9 +951,54 @@ div.ui-loader {
     display: none !important;
 }
 
+div.action {
+    background: #FFF;
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+}
 
+div.action form div.label {
+    width: 250px;
+}
 
+div.action form div.label select,
+div.action form div.label input[type=text],
+div.action form div.label input[type=email],
+div.action form div.label textarea {
+    width: 100%;
+    border-radius: 0;
+}
 
+div.action form div.label input[type=submit] {
+    width: 250px !important;
+    border-radius: 0 !important;
+}
+
+div.action form div.label.select::after {
+    right: 10px;
+}
+
+div.steps {
+    width: 600px;
+    margin: 10px auto 0 auto;
+}
+
+div.steps div.step {
+    height: 10px;
+    width: 190px;
+    background: #fff;
+    float: left;
+    margin-right: 15px;
+}
+
+div.steps div.step:last-child {
+    margin-right: 0;
+}
+
+div.steps div.step.selected {
+    background: #ecc285;
+}
 
 
 
@@ -1357,12 +1422,21 @@ div.ui-loader {
         margin: 30px auto !important;
     }
 
+    div.wrapper section.consult_slide div.consult_slide_content_wrapper h1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
     div.wrapper section.consult_slide div.consult_slide_content_wrapper p {
         width: auto;
     }
 
     div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser {
         width: 90%;
+    }
+
+    div.action {
+        width: 85%;
     }
 
     div.wrapper section.consult_slide div.consult_slide_content_wrapper div.browser div.browser_bar div.url {

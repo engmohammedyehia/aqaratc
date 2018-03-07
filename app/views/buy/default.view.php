@@ -35,6 +35,49 @@
     <div class="consult_slide_content_wrapper clearfix">
         <h1>Make your first request now</h1>
         <p>Our local agents are waiting to help you</p>
-
+        <div class="request_container">
+            <div class="action request clearfix">
+                <form method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="left">
+                        <div class="label select">
+                            <label for="location">Property Type</label>
+                            <select data-selectivity="true" name="location" id="location">
+                                <option value="">Appartment</option>
+                                <option value="">Villa</option>
+                                <option value="">Duplex</option>
+                                <option value="">Challet</option>
+                            </select>
+                        </div>
+                        <div class="label">
+                            <label for="budegt">Your Budget (EGP) <span class="red">*</span></label>
+                            <input required type="email" name="budegt" id="budegt" placeholder="Ex: 2,000,000">
+                        </div>
+                        <div class="label select">
+                            <label for="location">When do you need to buy?</label>
+                            <select data-selectivity="true" name="location" id="location">
+                                <option value="">Immediately</option>
+                                <option value="">1 Month</option>
+                                <option value="">3 Month</option>
+                                <option value="">6 Month</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="label">
+                            <label for="phone">Tell us more (optional) <span class="red">*</span></label>
+                            <textarea placeholder="Area, number of rooms, ... etc" name="" id="" cols="30" rows="10"></textarea>
+                            <input type="submit" name="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="action register"></div>
+            <div class="action thank_you"></div>
+        </div>
+        <div class="steps">
+            <div class="step selected"></div>
+            <div class="step"></div>
+            <div class="step"></div>
+        </div>
     </div>
 </section>
