@@ -33,19 +33,51 @@ class AuthController extends AbstractController
         $this->_view();
     }
 
-    public function authenticateAction()
+    public function registerAction()
     {
-        if(isset($_POST['ucname']) && isset($_POST['ucpwd'])) {
-            $isAuthorized = UserModel::authenticate($_POST['ucname'], $_POST['ucpwd'], $this->session);
-            if($isAuthorized === false) {
-                echo 3;
-            } elseif ($isAuthorized instanceof UserModel) {
-                $this->session->tu = $isAuthorized;
-                echo 1;
-            } elseif ($isAuthorized == 2) {
-                echo 2;
-            }
+        if(isset($this->session->u)) {
+            $this->redirect('/');
         }
+
+        $this->language->load('auth.register');
+
+        if(isset($_POST['submit']) && $this->isValid($this->_createActionRoles, $_POST)) {
+
+            $user = new UserModel();
+            $user->Username = $this->filterString($_POST['Username']);
+            $user->cryptPassword($_POST['Password']);
+            $user->Email = $this->filterString($_POST['Email']);
+            $user->PhoneNumber = $this->filterString($_POST['PhoneNumber']);
+            $user->GroupId = 2;
+            $user->SubscriptionDate = date('Y-m-d');
+            $user->LastLogin = date('Y-m-d H:i:s');
+            $user->Status = 1;
+
+            if(UserModel::userExists($user->Username)) {
+                $this->messenger->add($this->language->get('message_user_exists'), Messenger::APP_MESSAGE_ERROR);
+                goto problem;
+            }
+
+            if(UserModel::emailExists($user->Email)) {
+                $this->messenger->add($this->language->get('message_email_exists'), Messenger::APP_MESSAGE_ERROR);
+                goto problem;
+            }
+
+            if($user->save()) {
+                $userProfile = new UserProfileModel();
+                $userProfile->UserId = $user->UserId;
+                $userProfile->FirstName = $this->filterString($_POST['FirstName']);
+                $userProfile->LastName = $this->filterString($_POST['LastName']);
+                $userProfile->save(false);
+                $this->messenger->add($this->language->get('message_create_success'));
+            } else {
+                $this->messenger->add($this->language->get('message_create_failed'), Messenger::APP_MESSAGE_ERROR);
+            }
+            $this->redirect('/users');
+        }
+
+        problem:
+        $this->_view();
     }
 
     public function logoutAction()

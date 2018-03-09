@@ -42,9 +42,9 @@
         <div class="search_container">
             <h1>The Easiest Way To Your Home</h1>
             <ul>
-                <li><a class="selected" href="javascript:;">Find A Home</a></li>
-                <li><a href="javascript:;">Sell My Home</a></li>
-                <li><a href="javascript:;">Home Valuation</a></li>
+                <li><a class="selected" href="javascript:;" data-placeholder="Enter a City or a Region" data-button="<i class='fa fa-search'></i>" data-search-width="460" data-button-width="30">Find A Home</a></li>
+                <li><a href="javascript:;" data-placeholder="Enter a City or a Region" data-button="Start" data-search-width="420" data-button-width="70">Sell My Home</a></li>
+                <li><a href="javascript:;" data-placeholder="Enter your home location" data-button="Get a value" data-search-width="380" data-button-width="110">Home Valuation</a></li>
             </ul>
             <form class="clearfix" method="post" enctype="application/x-www-form-urlencoded">
                 <input type="text" name="q" placeholder="Enter a City or a Region">

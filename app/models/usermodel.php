@@ -56,6 +56,13 @@ class UserModel extends AbstractModel
         ');
     }
 
+    public static function emailExists($email)
+    {
+        return self::get('
+            SELECT * FROM ' . self::$tableName . ' WHERE Email = "' . $email . '"
+        ');
+    }
+
     public static function authenticate ($username, $password, SessionManager $session)
     {
         $password = crypt($password, APP_SALT) ;

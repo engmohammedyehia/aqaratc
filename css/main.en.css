@@ -1089,7 +1089,8 @@ div.action form div.label a {
     margin-right: 10px;
 }
 
-div.action form > input[type=submit] {
+div.action form > input[type=submit],
+input[type=submit].authentication {
     min-width: 80px;
     display: inline-block;
     padding: 11px 15px;
