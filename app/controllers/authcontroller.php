@@ -86,9 +86,9 @@ class AuthController extends AbstractController
                     $mailBody
                 );
 
-                $this->messenger->add($this->language->get('message_add_success'));
+                $this->messenger->add($this->language->get('message_user_create_success'));
             } else {
-                $this->messenger->add($this->language->get('message_add_error'), Messenger::APP_MESSAGE_ERROR);
+                $this->messenger->add($this->language->get('message_user_create_error'), Messenger::APP_MESSAGE_ERROR);
             }
 
             $this->redirect('/auth/register');
