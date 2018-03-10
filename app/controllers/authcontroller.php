@@ -3,8 +3,10 @@ namespace PHPMVC\Controllers;
 
 use PHPMVC\LIB\Helper;
 use PHPMVC\LIB\InputFilter;
+use PHPMVC\lib\Mailer;
 use PHPMVC\lib\Messenger;
 use PHPMVC\Models\UserModel;
+use PHPMVC\Models\UserProfileModel;
 
 class AuthController extends AbstractController
 {
@@ -40,18 +42,20 @@ class AuthController extends AbstractController
         }
 
         $this->language->load('auth.register');
+        $this->language->load('mailer.mailer');
 
-        if(isset($_POST['submit']) && $this->isValid($this->_createActionRoles, $_POST)) {
+        if(isset($_POST['submit'])) {
 
             $user = new UserModel();
-            $user->Username = $this->filterString($_POST['Username']);
-            $user->cryptPassword($_POST['Password']);
-            $user->Email = $this->filterString($_POST['Email']);
-            $user->PhoneNumber = $this->filterString($_POST['PhoneNumber']);
+            $user->Username = $this->filterString($_POST['username']);
+            $user->cryptPassword($_POST['password']);
+            $user->Email = $this->filterString($_POST['email']);
+            $user->PhoneNumber = $this->filterString($_POST['phone']);
             $user->GroupId = 2;
             $user->SubscriptionDate = date('Y-m-d');
             $user->LastLogin = date('Y-m-d H:i:s');
-            $user->Status = 1;
+            $user->Status = 2;
+            $user->Activation = base64_encode(sha1($user->Username . $user->Password . APP_SALT));
 
             if(UserModel::userExists($user->Username)) {
                 $this->messenger->add($this->language->get('message_user_exists'), Messenger::APP_MESSAGE_ERROR);
@@ -66,14 +70,28 @@ class AuthController extends AbstractController
             if($user->save()) {
                 $userProfile = new UserProfileModel();
                 $userProfile->UserId = $user->UserId;
-                $userProfile->FirstName = $this->filterString($_POST['FirstName']);
-                $userProfile->LastName = $this->filterString($_POST['LastName']);
+                $userProfile->FirstName = $user->Username;
+                $userProfile->LastName = $user->Username;
                 $userProfile->save(false);
-                $this->messenger->add($this->language->get('message_create_success'));
+
+                $url = ((isset($_SERVER['HTTPS'])) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . '/';
+                $username = $user->Username;
+                $activation = $url . 'activate/?code=' . $user->Activation;
+                $mailBody = $this->language->get('text_activation_mail');
+                $mailBody = preg_replace('/\[\[(name)\]\]/', $username, $mailBody);
+                $mailBody = preg_replace('/\[\[(activation)\]\]/', $activation, $mailBody);
+
+                Mailer::notify(
+                    $user->Email,
+                    $mailBody
+                );
+
+                $this->messenger->add($this->language->get('message_add_success'));
             } else {
-                $this->messenger->add($this->language->get('message_create_failed'), Messenger::APP_MESSAGE_ERROR);
+                $this->messenger->add($this->language->get('message_add_error'), Messenger::APP_MESSAGE_ERROR);
             }
-            $this->redirect('/users');
+
+            $this->redirect('/auth/register');
         }
 
         problem:

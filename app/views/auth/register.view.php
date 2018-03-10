@@ -9,29 +9,28 @@
                     <p class="message t<?= $message[1] ?>"><?= $message[0] ?><a href="" class="closeBtn"><i class="fa fa-times"></i></a></p>
                 <?php endforeach;endif; ?>
                 <form autocomplete="off" method="post" enctype="application/x-www-form-urlencoded">
-
                     <div class="left">
                         <div class="label">
                             <label for="username">Username:</label>
-                            <input required type="text" name="username" id="username">
+                            <input tabindex="10" required type="text" name="username" id="username">
                         </div>
                         <div class="label">
                             <label for="password">Password:</label>
-                            <input required type="password" name="password" id="password">
+                            <input tabindex="30" required type="password" name="password" id="password">
                         </div>
                         <div class="label">
                             <label for="phone">Phone Number:</label>
-                            <input required type="text" name="phone" id="phone" placeholder="Ex: +2010001010101">
+                            <input tabindex="50" required type="text" name="phone" id="phone" placeholder="Ex: +2010001010101">
                         </div>
                     </div>
                     <div class="right">
                         <div class="label">
                             <label for="email">Email:</label>
-                            <input required type="email" name="email" id="email" placeholder="Ex: example@example.com">
+                            <input tabindex="20" required type="email" name="email" id="email" placeholder="Ex: example@example.com">
                         </div>
                         <div class="label">
                             <label for="cpassword">Confirm Password:</label>
-                            <input required type="password" name="cpassword" id="cpassword">
+                            <input tabindex="40" required type="password" name="cpassword" id="cpassword">
                         </div>
                         <input class="authentication" type="submit" name="submit" value="Register">
                     </div>

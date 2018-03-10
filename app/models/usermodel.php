@@ -14,6 +14,7 @@ class UserModel extends AbstractModel
     public $LastLogin;
     public $GroupId;
     public $Status;
+    public $Activation;
 
     /**
      * @var UserProfileModel
@@ -33,6 +34,7 @@ class UserModel extends AbstractModel
         'LastLogin'         => self::DATA_TYPE_STR,
         'GroupId'           => self::DATA_TYPE_INT,
         'Status'            => self::DATA_TYPE_INT,
+        'Activation'        => self::DATA_TYPE_STR,
     );
 
     protected static $primaryKey = 'UserId';
@@ -79,5 +81,16 @@ class UserModel extends AbstractModel
             return $foundUser;
         }
         return false;
+    }
+
+    /**
+     * @param $code
+     * @return bool|UserModel
+     */
+    public static function getUserByActivationCode($code)
+    {
+        $sql = 'SELECT * FROM ' . self::$tableName . " WHERE activation = '" . $code . "'";
+        $user = self::getOne($sql);
+        return false !== $user ? $user : false;
     }
 }
