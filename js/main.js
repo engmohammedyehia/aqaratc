@@ -42,4 +42,17 @@ $('div.search_container ul li a').click(function(evt)
     } else {
         $('input[name=q]').width($(this).attr('data-search-width'));
     }
+    $('input[name=q] + button').attr('rel', $(this).attr('data-related-form'));
+});
+
+$('input[name=q] + button').click(function(evt)
+{
+    evt.preventDefault();
+    if($('input[name=q]').val() !== '') {
+        $('div.search_container').hide();
+        $('div.action_container.' + $(this).attr('rel')).show();
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+            $('div.overlay').show();
+        }
+    }
 });

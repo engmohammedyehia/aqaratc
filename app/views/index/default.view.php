@@ -1,3 +1,4 @@
+<?php include VIEWS_PATH . DS . 'action_containers.phtml'; ?>
 <section class="home_slide">
     <div class="home_slide_content_wrapper">
         <a href="" class="mobile_menu"><i class="fa fa-bars"></i></a>
@@ -42,13 +43,13 @@
         <div class="search_container">
             <h1>The Easiest Way To Your Home</h1>
             <ul>
-                <li><a class="selected" href="javascript:;" data-placeholder="Enter a City or a Region" data-button="<i class='fa fa-search'></i>" data-search-width="470" data-button-width="30">Find A Home</a></li>
-                <li><a href="javascript:;" data-placeholder="Enter a City or a Region" data-button="Start" data-search-width="430" data-button-width="70">Sell My Home</a></li>
-                <li><a href="javascript:;" data-placeholder="Enter your home location" data-button="Get a value" data-search-width="390" data-button-width="110">Home Valuation</a></li>
+                <li><a class="selected" href="javascript:;" data-placeholder="Enter a City or a Region" data-button="<i class='fa fa-search'></i>" data-search-width="470" data-button-width="30" data-related-form="buy">Find A Home</a></li>
+                <li><a href="javascript:;" data-placeholder="Enter a City or a Region" data-button="Start" data-search-width="430" data-button-width="70" data-related-form="sell">Sell My Home</a></li>
+                <li><a href="javascript:;" data-placeholder="Enter your home location" data-button="Get a value" data-search-width="390" data-button-width="110" data-related-form="valuation">Home Valuation</a></li>
             </ul>
             <form class="clearfix" method="post" enctype="application/x-www-form-urlencoded">
-                <input type="text" name="q" placeholder="Enter a City or a Region" list="cities">
-                <button><i class="fa fa-search"></i></button>
+                <input required type="text" name="q" placeholder="Enter a City or a Region" list="cities">
+                <button rel="buy"><i class="fa fa-search"></i></button>
                 <datalist id="cities">
                     <?php if ($cities !== false): foreach ($cities as $city): ?>
                         <option value="<?= $city->EnglishName ?>"></option>
