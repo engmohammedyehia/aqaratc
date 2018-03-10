@@ -20,6 +20,7 @@ class ActivateController extends AbstractController
         if(false !== $user) {
             $user->Activation = '';
             $user->Status = 1;
+            $user->save();
             $this->messenger->add($this->language->get('text_user_activated'));
             $this->redirect('/auth/login');
         } else {
