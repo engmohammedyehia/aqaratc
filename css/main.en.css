@@ -1125,6 +1125,10 @@ div.steps div.step.selected {
     background: #ecc285;
 }
 
+input::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
 p.message {
     font-size: 0.95em;
     background-color: #222;

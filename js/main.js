@@ -42,5 +42,4 @@ $('div.search_container ul li a').click(function(evt)
     } else {
         $('input[name=q]').width($(this).attr('data-search-width'));
     }
-
 });
