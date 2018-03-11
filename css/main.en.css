@@ -1069,7 +1069,7 @@ div.action_container div.step.selected {
 }
 
 div.action_container.sell div.request_container h1 {
-    background: #f39c45;
+    background: #f39c45 !important;
 }
 
 div.action_container.sell div.step.selected {
